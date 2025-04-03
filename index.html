@@ -102,11 +102,15 @@ src="https://www.facebook.com/tr?id=552401450564541&ev=PageView&noscript=1"
     <div class="container">
         <h1>Bienvenue sur ma page de test</h1>
         <p>Ceci est une page simple où vous pouvez tester l'implémentation du pixel Meta et de l'API Conversions.</p>
-       <button id="cta-button" onclick="alert('Clic sur le bouton!')">Cliquez ici</button>
-        <footer>
-            <p>Page créée pour le test de suivi et d'optimisation des campagnes publicitaires.</p>
-        </footer>
-    </div>
+       <button onclick="
+      gtag('event', 'cta_click', {button_text: 'Cliquez ici'});
+      setTimeout(function() {
+        window.location.href = '/merci.html';
+      }, 300);
+    ">
+      Cliquez ici
+    </button>
+  </div>
 
 </body>
 </html>
